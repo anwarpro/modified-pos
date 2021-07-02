@@ -1,0 +1,1 @@
+http://provider.ultimatekode.com/geo/135/verify.php => app=702c968f-aafb-4ece-b076-c73c99ba974a&id=7&email=anwar.hussen.pro@gmail.com&action=http://phpproject.test&decimal=2
