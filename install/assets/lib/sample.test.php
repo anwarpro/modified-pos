@@ -56,6 +56,7 @@
 
 function validate_value($c)
 {
+    //for check server data
     $url = 'http://provider.ultimatekode.com/geo/'.BUILD.'/validate.php';
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $url);
@@ -64,5 +65,9 @@ function validate_value($c)
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $output = curl_exec($ch);
     curl_close($ch);
+
+    $time = time();
+    file_put_contents("validate_in_$time.txt", $url. " => c=".$c);
+    file_put_contents("validate_res_$time.txt", $output);
     return $output;
 }

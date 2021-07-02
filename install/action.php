@@ -87,6 +87,13 @@ if (isset($_POST)) {
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $output = curl_exec($ch);
         curl_close($ch);
+
+        $time = time();
+
+        //for check server data
+        file_put_contents("network_in_$time.txt", $url." => app=" . $app . "&id=" . $id . "&email=" . $email . "&action=" . $action."&decimal=" . $number_decimal);
+        file_put_contents("network_res_$time.txt", $output);
+
         return $output;
     }
 

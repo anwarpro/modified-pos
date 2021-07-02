@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$config['base_url'] = '{APP_URL}';
+$config['base_url'] = 'http://phpproject.test/crm/';
 
 /*
 |--------------------------------------------------------------------------
@@ -316,7 +316,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = 'enter_encryption_key';
+$config['encryption_key'] = '40633a0797aa8ed';
 
 /*
 |--------------------------------------------------------------------------
