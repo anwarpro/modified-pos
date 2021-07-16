@@ -165,7 +165,7 @@
 
                             <thead>
                             <tr class="item_header bg-gradient-directional-blue white">
-                                <th width="30%" class="text-center"><?php echo $this->lang->line('Item Name') ?></th>
+                                <th width="20%" class="text-center"><?php echo $this->lang->line('Item Name') ?></th>
                                 <th width="8%" class="text-center"><?php echo $this->lang->line('Quantity') ?></th>
                                 <th width="10%" class="text-center"><?php echo $this->lang->line('Rate') ?></th>
                                 <th width="10%" class="text-center"><?php echo $this->lang->line('Tax(%)') ?></th>
@@ -175,6 +175,8 @@
                                     <?php echo $this->lang->line('Amount') ?>
                                     (<?= currency($this->aauth->get_user()->loc); ?>)
                                 </th>
+                                <th width="10%" class="text-center"><?php echo $this->lang->line('Emi') ?></th>
+                                <th width="7%" class="text-center"><?php echo $this->lang->line('Warranty') ?></th>
                                 <th width="5%" class="text-center"><?php echo $this->lang->line('Action') ?></th>
                             </tr>
 
@@ -201,6 +203,12 @@
                                            onkeyup="rowTotal('0'), billUpyog()" autocomplete="off"></td>
                                 <td><span class="currenty"><?= currency($this->aauth->get_user()->loc); ?></span>
                                     <strong><span class='ttlText' id="result-0">0</span></strong></td>
+
+                                <td><input type="text" class="form-control" name="product_emi[]" id="vat-0" autocomplete="off"></td>
+                                <td>
+                                    <input type="date" class="form-control required" name="product_warrant[]" autocomplete="false">
+                                </td>
+
                                 <td class="text-center">
 
                                 </td>
@@ -213,7 +221,7 @@
                                 <input type="hidden" name="serial[]" id="serial-0" value="">
                             </tr>
                             <tr>
-                                <td colspan="8"><textarea id="dpid-0" class="form-control" name="product_description[]"
+                                <td colspan="10"><textarea id="dpid-0" class="form-control" name="product_description[]"
                                                           placeholder="<?php echo $this->lang->line('Enter Product description'); ?> (Optional)"
                                                           autocomplete="off"></textarea><br></td>
                             </tr>
